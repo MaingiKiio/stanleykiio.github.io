@@ -1,0 +1,223 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: min(5em, 8%);
+    background-color: #0a192f;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    /* font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem); */
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #145a32, #0a192f);
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #196f3d;
+}
+
+/* Sections Styling */
+section {
+    padding: 35px;
+    margin: 15px auto;
+    width: 95%;
+    background-color: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+    color: #28a745;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 10px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f172a;
+    color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+table, th, td {
+    border: 1px solid #28a745;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #145a32;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: rgba(40, 167, 69, 0.2);
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #28a745;
+    border-radius: 6px;
+    background: #044df7;
+    color: #ffffff;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #196f3d;
+    outline: none;
+}
+
+button {
+    background: linear-gradient(to right, #28a745, #145a32);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #145a32, #28a745);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    header img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+
+    section {
+        width: 100%;
+        padding: 10px;
+        margin: 5px auto;
+    }
+
+    table, th, td {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
